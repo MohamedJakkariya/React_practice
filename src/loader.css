@@ -1,0 +1,84 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   background-color: rgb(54, 52, 52);
+}
+
+.loader {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   /* width: atuo; */
+   /* height: auto; */
+   display: flex;
+   transform: translate(-50%, -50%);
+   /* border: 1px solid white; */
+   animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.loader span {
+   width: 30px;
+   height: 30px;
+   display: block;
+   margin: 2px;
+   background: white;
+   animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.1);
+   }
+   100% {
+      transform: scale(1.2);
+   }
+}
+
+.loader p:nth-child(1) span:nth-child(1) {
+   border-radius: 50% 50% 0 50%;
+   animation-delay: 0.3s;
+   background-color: rgb(98, 173, 28);
+   transform-origin: bottom right;
+   transition: 0.1s;
+}
+
+.loader p:nth-child(1) span:nth-child(2) {
+   border-radius: 50% 0% 50% 50%;
+   animation-delay: 0.4s;
+   background-color: rgb(28, 139, 173);
+   transform-origin: top right;
+   transition: 0.2s;
+}
+
+.loader p:nth-child(2) span:nth-child(1) {
+   border-radius: 50% 50% 50% 0%;
+   animation-delay: 0.2s;
+   background-color: rgb(91, 28, 173);
+   transform-origin: top right;
+   transition: 0.3s;
+}
+
+.loader p:nth-child(2) span:nth-child(2) {
+   border-radius: 0% 50% 50% 50%;
+   background-color: rgb(173, 28, 28);
+   transform-origin: top right;
+   transition: 0.3s;
+}

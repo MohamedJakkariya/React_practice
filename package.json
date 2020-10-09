@@ -1,7 +1,7 @@
 {
-  "name": "react-practice-sand-box",
+  "name": "test-box",
   "version": "1.0.0",
-  "description": "This sandbox for testing my react skills.",
+  "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
